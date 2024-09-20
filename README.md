@@ -1,7 +1,7 @@
 # uh-recon
-The "Uh-Recon" tools by Unhackers for pre-engagement reconnaissance
-
 PROBABLY NOT READY FOR YOU YET
+
+The "Uh-Recon" tools for pre-engagement reconnaissance.
 
 Synopsis
 
@@ -9,7 +9,7 @@ These are some of the tools used by the Unhackers team in
 pre-engagement reconnaisance and related tasks. 
 
 This functionality overlaps with those of interest to pen testers, 
-bug hunters, security researchers.
+bug hunters, security researchers. You're welcome to them.
 
 Requirements
 
@@ -21,4 +21,21 @@ The Kit
   - Is documented mostly in code
   - Is still a mess (but cleanup is active)
   - Includes example output directory/logs/etc
+
+The Bugs
+  
+  So many, see bugs.txt
+
+Configuration
+
+  Pending
+
+Execution
+
+  Pending
+
+Outputs
+
+  Pending
+
 
