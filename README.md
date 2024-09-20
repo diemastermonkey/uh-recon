@@ -6,10 +6,15 @@ The "Uh-Recon" tools for pre-engagement reconnaissance.
 Synopsis
 
 These are some of the tools used by the Unhackers team in 
-pre-engagement reconnaisance and related tasks. 
+pre-engagement reconnaisance and related tasks. Using Shodan 
+queries as a starting point, they gather various enrichment 
+and summary data into collections stored in named subdirectories.
+
+Additionally, they limit query API use by refreshing data at most 
+once per day (soon to be configurable).
 
 This functionality overlaps with those of interest to pen testers, 
-bug hunters, security researchers. You're welcome to them.
+bug hunters, security researchers. And you're welcome to them!
 
 Requirements
 
