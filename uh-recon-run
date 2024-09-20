@@ -1,0 +1,31 @@
+#!/usr/bin/bash
+# Run hitlist in bg to a log so you can tail it
+# Requires "$0-bg" script
+# 2024/gad
+
+# If no args
+if [[ -z "$1" || ! -f "$1" ]]; then
+  head -5 $0 | tail -4
+  echo -e "$0 <file_with_recon_parameters>\n"
+  exit
+fi
+
+# Run script w/name of file, keep pid for use below
+./$0-bg "$1" > "$1.log" &
+BGPID=$!
+
+# Abort on run script failure
+if [ $? -ne 0 ]; then
+  echo -e "$0 : Failure running $0-bg"
+  echo -e "$0 : Aborting."
+  exit
+fi
+
+# Monitor log file till PID terminates
+# Serving suggestion -----------------v
+tail --follow $1.log --pid=$BGPID # | ccze --raw-ansi 
+
+# Store created dirs in a handy file
+echo "Creating $1.dirs.txt"
+cat $1.log | egrep 'Contents in' | sed 's/.* //g' > $1.dirs.txt
+

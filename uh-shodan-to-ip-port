@@ -1,0 +1,14 @@
+#!/usr/bin/bash 
+# Turn the output of a shodan cli search 
+# into a list of IPs and ports. gad/24
+
+# If no args
+if [ -z "$1" ]; 
+then
+  head -4 $0 | tail -3
+  echo -e "$0 <input file> \n"
+  exit
+fi
+
+# Just output
+cat "$1" | sed 's/> //g' | sed 's/< //g' | cut --fields=1,2 | sort --numeric --unique

@@ -1,0 +1,18 @@
+#!/usr/bin/bash 
+# Turn the output of a shodan cli search into a list of 
+# IPs, ports, services, and domains if present. gad/24
+
+# If no args
+if [ -z "$1" ]; 
+then
+  head -4 $0 | tail -3
+  echo -e "$0 <.raw input file> \n"
+  exit
+fi
+
+# Just output
+# cat "$1" | sed 's/> //g' | sed 's/< //g' | cut --fields=1,2 | sort --numeric --unique
+#
+cat "$1" | sort --numeric-sort | awk '{print $1,$2,$3,$4}'
+
+

@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+# Just starts Shodan CLI and runs queries
+# so output can be easily bg/tailed
+# 2024/gad
+
+# If no args
+if [[ -z "$1" || ! -f "$1" ]];
+then
+  head -5 $0 | tail -4
+  echo -e "$0 <file_with_recon_parameters>\n"
+  exit
+fi
+
+# Init Shodan
+./uh-shodan-init
+
+echo -e '\n'
+cat "$1" | while IFS= read -r x; do
+  echo "./uh-recon-shodan-query $x"
+  ./uh-recon-shodan-query "$x"
+done 

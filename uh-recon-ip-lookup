@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+# Simply resolves IPs and appends results
+# Really lame. Improve it pls. 
+# gad/24
+
+# If no args
+if [ -z "$1" ];
+then
+  head -5 $0 | tail -4
+  echo -e "$0 <file_with_ips>\n"
+  exit
+fi
+
+for ip in $(cat "$1" | sed 's/\s.*//g'); do dns=$(host $ip|sed 's/.*\s//g'); echo -e "$ip \t\t $dns"; done 
+

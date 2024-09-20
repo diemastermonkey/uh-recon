@@ -1,0 +1,34 @@
+#!/usr/bin/bash
+# Turn a single IP or list containing IPs
+# into input for 'nrich', and produce output.
+# Should also accept input via pipe.
+# Ignores non-IPs in input
+# 2024/gad
+
+# Config
+NRICH="/usr/bin/nrich"                # Nrich cli name
+IN="$*"                               # May turn out to be pipe
+DATESTAMP=$(date "+%Y%m%d")
+
+# If via pipe
+if [ ! -t 0 ]; then
+  read -r IN  
+fi
+
+# If no args
+if [ -z "$IN" ];
+then
+  head -7 $0 | tail -6          # Helpful header
+  echo -e "$0 <file_with_IPs>\n"
+  exit
+fi
+
+# Ok you got me this is just a wrapper around a Perl one-liner :P
+OUT=$(cat "$1" | perl -ne 'print ("\n$&") if (/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/g);')
+SUM=$(echo "$OUT" | md5sum | sed 's/ .*//g') 
+TMP="$0.tmp.$SUM"
+echo "$OUT" > "/tmp/$TMP"
+$NRICH "/tmp/$TMP"         # Directly output and end
+sleep 0.5
+rm "/tmp/$TMP"
+

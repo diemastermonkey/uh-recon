@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+# Simply un-escape URLs, ie %22 etc
+# GAD2024
+# cat something | gad-unescape
+
+use URI::Escape;
+print (uri_unescape(<>));

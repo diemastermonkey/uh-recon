@@ -1,0 +1,116 @@
+#!/usr/bin/bash 
+# Create/update a recon collection with Shodan CLI/others
+# Accepts Shodan cli queries or shodan.io URLs as arg or pipe
+# 2024/gad
+# 
+# Search parameter example:
+#   $0 'country:us state:ca port:3389 administrator'
+#   echo 'country:us state:ca port:3389 administrator' | $0
+#
+# Shodan URL examples:
+#   $0 https://www.shodan.io/search?query=state%3Aca+port%3A23+cisco
+#   echo 'https://www.shodan.io/search?query=state%3Aca+port%3A23+cisco' | $0
+#
+# Kludgey as hell.
+
+# Config
+SHODAN="shodan"                       # Shodan cli name
+STATSCMD="$SHODAN stats"              # Tweak if shodan syntax changes
+SEARCHCMD="$SHODAN search"
+UHSU2Q="./uh-shodan-url-to-query"     # Converts URLs to parms
+UHS2IP="./uh-shodan-to-ip-port"       # Filters raw shodan
+UHIPNR="./uh-recon-ip-to-nrich"       # Runs IP lists thru Nrich
+UHDOMS="./uh-recon-raw-to-domains"    # Summarizes domain counts
+TEMPLATE="uh_recon_TOKENS"            # Template for directories
+IN="$*"                               # May turn out to be pipe
+# Removed from $TOKENS for dirnames etc
+REMOVESTRINGS="country\|state\|city\|port\|org\|html\|\@"
+# Metadata prepared at runtime
+DATESTAMP=$(date "+%Y%m%d")
+INFO="CONTENT = Uh-Tools Recon Info\nGENERATOR = $0\nEXECUTED = $DATESTAMP"
+
+# If via pipe
+if [ ! -t 0 ]; then
+  read -r IN  
+fi
+
+# If no args
+if [ -z "$IN" ];
+then
+  head -15 $0 | tail -14          # Helpful header
+  echo -e "$0 <shodan_search_query> [optional shodan args]\n"
+  exit
+fi
+
+# If a Shodan search URL, convert it first
+if echo "$IN" | grep -iq 'shodan.io'; then
+  echo -e "$0 : Converting your Shodan URL"
+  SHODANURL="$IN"      # Save for .info file
+  IN=$($UHSU2Q "$IN")  # Convert w/uh tool
+fi
+
+# Now compose dir/file names
+SEARCHARGS=$(echo "$IN" | perl -ne 'chomp();print;')  # Perl cheese
+TOKENS=$(echo "$SEARCHARGS" | sed "s/'//g")           # Cleanup
+TOKENS=$(echo "$TOKENS" | sed 's/"//g')
+# (New) Remove common search terms from query, shorter dir names
+TOKENS=$(echo "$TOKENS" | sed "s/\($REMOVESTRINGS\)//ig")
+TOKENS=$(echo "$TOKENS" | sed 's/://g' | sed 's/ /_/g')
+TOKENS=$(echo "$TOKENS" | sed 's/-//g' | sed 's/+/_/g')
+DIR=$(echo "$TEMPLATE" | sed "s/TOKENS/$TOKENS/g")
+BASEFILE="uh_recon_shodan_$TOKENS"
+
+# Misc cleanup
+BASEFILE=$(echo "$BASEFILE" \
+  | sed 's/\s/-/g' \
+  | sed 's/"//g' \
+  | sed 's/\.//g')
+
+INFO="$INFO\nSEARCH = $SEARCHARGS"
+INFO="$INFO\nSHODANURL = $SHODANURL"
+INFO="$INFO\nTOKENS = $TOKENS"
+INFO="$INFO\nDIR = $DIR"
+INFO="$INFO\nBASEFILE = $BASEFILE"
+
+# Prep directory structure if needed
+if [ ! -d "$DIR" ]; 
+then
+  echo "$0 : Creating $DIR" 
+  mkdir $DIR
+fi
+
+# Fetch raw shodan data to 'current' file, unless it exists
+# *Exits if fresh results exist*
+if [ ! -f "$DIR/$BASEFILE.raw.txt" ];
+then
+  echo "$0 : Fetching Shodan results"
+  $SEARCHCMD "$SEARCHARGS" > "$DIR/$BASEFILE.raw.txt"
+else 
+  echo "$0 : Keeping stored results < 24h old"
+  echo "$0 : Contents in $DIR"
+  echo -e "$0 : Exiting\n"                 # Exits
+  exit
+fi
+
+# Get 'stats' for search, into .stats.txt file
+STATS=$($STATSCMD "$SEARCHARGS")
+echo "$STATS" > "$DIR/$BASEFILE.stats.txt"
+
+# Create .info.txt
+echo -e "$INFO" > "$DIR/$BASEFILE.info.txt"
+WC=$(echo -e '\n  Line Word Bytes File' && wc "$DIR/$BASEFILE.raw.txt")
+echo -e "WORDCOUNT\n$WC" >> "$DIR/$BASEFILE.info.txt"
+echo -e "$0 : $WC"
+
+# Additional processing with other uh-tools
+# IP/port listing
+$UHS2IP "$DIR/$BASEFILE.raw.txt" > "$DIR/$BASEFILE.ip.port.txt"
+# Domain listing
+cat "$DIR/$BASEFILE.raw.txt" | $UHDOMS > "$DIR/$BASEFILE.domains.txt"
+# Run IPs through nrich
+$UHIPNR "$DIR/$BASEFILE.ip.port.txt" > "$DIR/$BASEFILE.nrich.txt"
+
+# Update user, exit
+echo -e "$0 : Contents in $DIR"
+echo -e "$0 : Exiting."
+

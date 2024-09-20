@@ -1,0 +1,8 @@
+country:us state:ca city:irvine port:80 login
+country:us state:ca port:3389 administrator
+country:us state:ca port:23 cisco
+country:us root port:23 -login -password -name -Session
+country:us state:ca "Authentication: disabled" port:445
+country:us state:wa org:"Comcast Cable Communications  LLC"
+ip:104.18.32.47
+ip:104.18.32.47

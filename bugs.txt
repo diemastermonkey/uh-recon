@@ -1,6 +1,7 @@
 # Some known bugs in no order
 Doesn't always know when Shodan key init fails.
 Doesn't know (or care) when a search returns no results.
+Zero awareness of empty Shodan API credits
 Doesn't handle all quoted search strings properly.
 Gets hella confused by many symbols (ie poor filtering).
 Functionality is kinda scattered. Needs refactoring.

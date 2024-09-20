@@ -1,0 +1,16 @@
+#!/usr/bin/perl
+# Summarize occurances of a string
+# in pipe of mixed repeated strings;
+# Something I often need. Easy in Perl.
+# 2024/gad
+
+my (%Count);        
+while (<STDIN>) {
+  chomp;
+  next if (/^\s*$/);
+  $Count{$_} = $Count{$_} + 1;
+}
+
+foreach (keys(%Count)) { 
+  print ("\n".$Count{$_}." ".$_);
+}

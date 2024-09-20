@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+# Count up domains in a Shodan CLI raw output
+# Perl because python associative arrays are pita
+# A bit broken. 2024/gad
+my (%IPS);
+my (%DOMS);
+
+while ($line = <STDIN>) { 
+  next if ($line =~ /^\s*$/);            # Skip blanks
+  ($ip, $port, $dns, $service) = split (/\s+/, $line);
+  my $dom = $1 if ($dns =~ /\.(\w+\.\w{2,3})\b/);
+  $IPS{$ip} = $IPS{$ip} + 1;
+  $DOMS{$dom} = $DOMS{$dom} + 1;
+}
+
+foreach $dom (%DOMS) { 
+  # Really crappy lazy cleanup
+  next if ($dom =~ /^\d+$/);   # Skip numeric doms?
+  next unless ($dom =~ /\w+/); # Occasional blanks
+  print ("\n$dom " . $DOMS{$dom});
+}

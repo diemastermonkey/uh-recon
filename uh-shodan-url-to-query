@@ -1,0 +1,31 @@
+#!/usr/bin/sh 
+# Simply converts a Shodan search URL to 
+# parameters for uh-recon-shodan-query.
+#   echo "https://blah?stuff%3Aenc" | ThisScript
+# or 
+#   ThisScript "https://blah?stuff%3Aenc"
+# GAD 2024
+
+UNESCAPE="./gad-unescape"
+
+# Assume via arg
+IN="$1"
+
+# If via pipe
+if [ ! -t 0 ]; then
+  read -r IN
+fi
+
+# If nothing
+if [ -z "$IN" ]; then
+  head -8 "$0"
+  exit
+fi
+
+OUTSYNTAX=$(echo "$IN" | $UNESCAPE \
+  | sed 's/^http.*query\=//g' \
+  | sed 's/\&page\=[0-9][0-9]*//g' \
+  | sed 's/+/ /g')
+
+echo "$OUTSYNTAX"
+

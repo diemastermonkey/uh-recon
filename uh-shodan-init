@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+# Inits your Shodan CLI with shodan-api-key.xt
+# 2024/gad
+
+echo -e "$0 : Initializing Shodan API w/key in shodan-api-key.txt ..."
+printf "$0 : ..."
+shodan init $(cat shodan-api-key.txt | egrep -v "^#" | egrep '.' | head -1) \
+  || echo "$0 : Error initializing key. Sorry?"
