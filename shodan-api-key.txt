@@ -1,4 +1,4 @@
-# Put your Shodan API key in here
+# Put your own Shodan API key in here
 # Copy it from https://account.shodan.io/
 # 2024/gad
 
