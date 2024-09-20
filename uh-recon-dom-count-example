@@ -1,1 +1,0 @@
-for x in $(find . | egrep ".raw.txt"); do echo "# $x"; ./uh-recon-raw-to-domains "$x"; done
