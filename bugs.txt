@@ -1,0 +1,11 @@
+# Some known bugs in no order
+Doesn't always know when Shodan key init fails.
+Doesn't know (or care) when a search returns no results.
+Doesn't handle all quoted search strings properly.
+Gets hella confused by many symbols (ie poor filtering).
+Functionality is kinda scattered. Needs refactoring.
+Doesn't handle missing tools very well or at all in some cases.
+The whole "-run-bg" scheme is crude and hokey. Just make script smarter.
+Doesn't normalize order of search parameters; Directory names exactly match order of parameters, resulting in different directories for the same results if phrased differently.
+A few calls to Perl, that's unfashionable and unportable.
+Literally no clean-up features at all. :P

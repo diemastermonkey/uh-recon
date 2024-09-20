@@ -1,0 +1,5 @@
+# Put your Shodan API key in here
+# Copy it from https://account.shodan.io/
+# 2024/gad
+
+RWFzdGVyIGVnZ3Mgb24gdGhlIG1lbnU
