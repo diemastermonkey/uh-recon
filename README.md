@@ -51,7 +51,7 @@ $ echo 'Usage coming soon!'
 (Coming soon: List of all scripts and what and why)
 
 ## Bugs
-Soo many, see bugs.txt
+Soo many, see [bugs.txt](https://github.com/diemastermonkey/uh-recon/blob/main/bugs.txt)
 
 ## License and Acknowledgements
 
