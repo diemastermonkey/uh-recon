@@ -41,31 +41,20 @@ $ git clone https://github.com/diemastermonkey/uh-recon.git
 
 ## Usage
 
+```console
+$ echo 'Usage coming soon!'
+```
+
+## Outputs
+(Coming soon: List of all outputs and what and why)
+
+## Components
+(Coming soon: List of all scripts and what and why)
+
 ## Bugs
+Soo many, see bugs.txt
 
 ## License and Acknowledgements
 
 Created by [Unhackers](https://unhackers.net/).
 Licensed under the [GNU Lesser General Public License v3.0](LICENSE).
-
-The Kit
-
-  -
-
-The Bugs
-  
-  So many, see bugs.txt
-
-Configuration
-
-  Pending
-
-Execution
-
-  Pending
-
-Outputs
-
-  Pending
-
-
