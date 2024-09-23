@@ -7,11 +7,10 @@ Tools used by the Unhackers team in pre-engagement reconnaisance and related tas
 
 Using Shodan  queries as a starting point, these gather various enrichment 
 and summary data into "collections" stored in named subdirectories.
-Additionally, they limit query API use by refreshing data at most 
-once per day (soon to be configurable).
+Additionally, they help lower Shodan API use by low-key caching data.
 
-This functionality overlaps with those of interest to pen testers, 
-bug hunters, security researchers. And you're welcome to them!
+This is functionality of interest to pen testers, bug hunters, security researchers - hackers. 
+And we're here to share!
 
 Features:
 * Abstracts Shodan CLI for noobish users
