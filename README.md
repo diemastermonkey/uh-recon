@@ -56,4 +56,5 @@ Soo many, see bugs.txt
 ## License and Acknowledgements
 
 Created by [Unhackers](https://unhackers.net/).
+
 Licensed under the [GNU Lesser General Public License v3.0](LICENSE).
