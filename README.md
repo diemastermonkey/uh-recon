@@ -1,12 +1,23 @@
 # uh-recon
-PROBABLY NOT READY FOR YOU YET
 
 The "Uh-Recon" tools for pre-engagement reconnaissance.
 
+PROBABLY NOT READY FOR YOU YET
+
+## Synopsis
+Tools used by the Unhackers team in pre-engagement reconnaisance and related tasks. 
+
+Features:
+* Does thing
+* Includes example output directory/logs/etc
+
+Un-Features:
+* Minimal dependencies beyond Shodan CLI
+* Still documented mostly in code
+* Still a mess (but cleanup is active)
+
 Synopsis
 
-These are some of the tools used by the Unhackers team in 
-pre-engagement reconnaisance and related tasks. 
 
 Using Shodan 
 queries as a starting point, they gather various enrichment 
@@ -21,12 +32,24 @@ Requirements
 
 BASH, Shodan CLI for your platform, Shodan API Key, Nrich, grep, and Perl
 
+## Installation
+
+```console
+$ git clone ______
+```
+
+## Usage
+
+## Bugs
+
+## License and Acknowledgements
+
+Created by [Unhackers](https://unhackers.net/).
+Licensed under the [GNU Lesser General Public License v3.0](LICENSE).
+
 The Kit
 
-  - Relies on Shodan and other tools and services
-  - Is documented mostly in code
-  - Is still a mess (but cleanup is active)
-  - Includes example output directory/logs/etc
+  -
 
 The Bugs
   
