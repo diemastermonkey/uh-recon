@@ -30,7 +30,7 @@ Un-Features:
 Requirements:
 * Shodan CLI for your platform
 * Shodan API Key
-* BASH, grep, sed, awk
+* bash, grep, sed, awk
 * Python, Perl
 * [Nrich](https://gitlab.com/shodan-public/nrich)
 
