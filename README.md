@@ -36,7 +36,7 @@ Requirements:
 ## Installation
 
 ```console
-$ git clone ______
+$ git clone https://github.com/diemastermonkey/uh-recon.git
 ```
 
 ## Usage
