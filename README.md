@@ -31,7 +31,7 @@ Requirements:
 * Shodan API Key
 * BASH, grep, sed, awk
 * Python, Perl
-* Nrich [link pending](https://gitlab.com/shodan-public/nrich)
+* [Nrich](https://gitlab.com/shodan-public/nrich)
 
 ## Installation
 
