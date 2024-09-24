@@ -18,20 +18,19 @@ Features:
 * Abstracts Shodan CLI for noobish users
 * Creates/refreshes recon data into subdirectories
 * Enriches with nrich and other tools
-* Decreases API use, updating after N days
-* Includes example output directory/logs/etc
+* Easy-bakes data so no fuss for other tools
+* Decreases API use, updating only after N days
+* Minimal dependencies beyond Shodan CLI
 
 Un-Features:
-* Minimal dependencies beyond Shodan CLI
-* Still documented mostly in code
-* Still a mess (but cleanup is active)
-* No cleanup/log/data rotation features at all
+* Documented mostly in code
+* Kinda hot mess (cleanup active)
+* No log/data rotation/purge features yet
 
 Requirements:
 * Shodan CLI for your platform
 * Shodan API Key
-* bash, grep, sed, awk
-* Python, Perl
+* bash, grep, sed, awk, Python, Perl
 * [Nrich](https://gitlab.com/shodan-public/nrich)
 
 ## Installation
@@ -47,10 +46,9 @@ $ echo 'Usage coming soon!'
 ```
 
 ## Outputs
-(List all outputs and what and why)
 
 ### Output Directories
-(Describe how they're generated)
+Directories are named for their search parameters, and all related outputs are stored therein. 
 
 For the query `country:us state:ca city:irvine port:3389`, this directory will be created (or updated):
 ```
@@ -71,16 +69,16 @@ uh_recon_us_ca_irvine_3389/uh_recon_shodan_us_ca_irvine_3389.stats.txt
 Here's what each of the files contain:
 * .info.txt: Metadata about the search, parameters, and tools used
 * .stats.txt: The output of Shodan's "stats" command for this search
+* .nrich.txt: Output of Nrich provided with your search results 
 * .domains.txt: Listing and count of domains in search results
 * .ip.port.txt: Listing of only IPs and ports, one per line
-* .nrich.txt: Output of Nrich provided with your search results
 * .raw.txt: Complete raw output of your Shodan search
 
 ## Components
 (Coming soon: List of all scripts and what and why)
 
 ## Bugs
-Soo many, see [bugs.txt](https://github.com/diemastermonkey/uh-recon/blob/main/bugs.txt)
+So, so many, see [bugs.txt](https://github.com/diemastermonkey/uh-recon/blob/main/bugs.txt)
 
 ## License and Acknowledgements
 
