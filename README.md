@@ -69,12 +69,12 @@ uh_recon_us_ca_irvine_3389/uh_recon_shodan_us_ca_irvine_3389.stats.txt
 ```
 
 Here's what each of the files contain:
-* ...info.txt: Metadata about the search, parameters, tools, etc
-* ...stats.txt: The output of Shodan's "stats" command for this search
-* ...domains.txt: Listing and count of domains in search results
-* ...ip.port.txt: Listing of only IPs and ports, one per line
-* ...nrich.txt: Output of Nrich provided with your search results
-* * ...raw.txt: Complete raw output of your Shodan search
+* .info.txt: Metadata about the search, parameters, and tools used
+* .stats.txt: The output of Shodan's "stats" command for this search
+* .domains.txt: Listing and count of domains in search results
+* .ip.port.txt: Listing of only IPs and ports, one per line
+* .nrich.txt: Output of Nrich provided with your search results
+* .raw.txt: Complete raw output of your Shodan search
 
 ## Components
 (Coming soon: List of all scripts and what and why)
