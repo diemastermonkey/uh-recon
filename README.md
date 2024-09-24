@@ -49,6 +49,25 @@ $ echo 'Usage coming soon!'
 ## Outputs
 (Coming soon: List of all outputs and what and why)
 
+### Directories
+(Describe them)
+
+For the query 'country:us state:ca city:irvine port:3389', this directory will be created (or updated):
+
+uh_recon_us_ca_irvine_3389
+
+### Files
+(Describe each)
+
+For the query 'country:us state:ca city:irvine port:3389', the following files will be generated:
+
+uh_recon_us_ca_irvine_3389/uh_recon_shodan_us_ca_irvine_3389.domains.txt
+uh_recon_us_ca_irvine_3389/uh_recon_shodan_us_ca_irvine_3389.info.txt
+uh_recon_us_ca_irvine_3389/uh_recon_shodan_us_ca_irvine_3389.ip.port.txt
+uh_recon_us_ca_irvine_3389/uh_recon_shodan_us_ca_irvine_3389.nrich.txt
+uh_recon_us_ca_irvine_3389/uh_recon_shodan_us_ca_irvine_3389.raw.txt
+uh_recon_us_ca_irvine_3389/uh_recon_shodan_us_ca_irvine_3389.stats.txt
+
 ## Components
 (Coming soon: List of all scripts and what and why)
 
