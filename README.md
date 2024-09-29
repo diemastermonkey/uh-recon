@@ -35,14 +35,27 @@ Requirements:
 
 ## Installation and Setup
 
-1. Clone the repository (/opt/ is a good place)
+1. Clone the repository (`/opt/` is a good place for it)
 
 ```console
-$ git clone https://github.com/diemastermonkey/uh-recon.git
+gad@ghost:~$ cd /opt
+gad@ghost:/opt$ git clone https://github.com/diemastermonkey/uh-recon.git
 ```
 
 2. Enter your Shodan API key in `shodan-api-key.txt`
-3. Verify your key is working with `./uh-shodan-init
+
+```console
+gad@ghost:/opt$ cd uh-recon
+gad@ghost:/opt/uh-recon$ echo 'RWFzdGVyIGVnZ3Mgb24gdGhlIG1lbnU' > shodan-api-key.txt
+RWFzdGVyIGVnZ3Mgb24gdGhlIG1lbnU
+^C
+```
+
+4. Verify your key is working with `./uh-shodan-init
+
+```console
+gad@ghost:/opt/uh-recon$ ./uh-shodan-init
+```
 
 ## Usage
 
@@ -52,21 +65,21 @@ $ git clone https://github.com/diemastermonkey/uh-recon.git
 
 ```console
 gad@ghost:~$ cd /opt/uh-recon
-gad@ghost:/opt/recon$ cat > mylist.txt
+gad@ghost:/opt/uh-recon$ cat > mylist.txt
 country:us state:ca port:3389 administrator
 country:us state:ca city:irvine port:80 login
 ^C
 
-gad@ghost:/opt/recon$ ./uh-recon-run
+gad@ghost:/opt/uh-recon$ ./uh-recon-run
 # Run hitlist in bg to a log so you can tail it
 # Requires "$0-bg" script
 # 2024/gad
 
 ./uh-recon-run <file_with_recon_parameters>
 
-gad@ghost:/opt/recon$ ./uh-recon-run mylist.txt
+gad@ghost:/opt/uh-recon$ ./uh-recon-run mylist.txt
 
-gad@ghost:/opt/recon$ cat hitlist_sample.txt.log
+gad@ghost:/opt/uh-recon$ cat hitlist_sample.txt.log
 ./uh-shodan-init : Initializing Shodan API w/key in shodan-api-key.txt ...
 ./uh-shodan-init : ...Successfully initialized
 ./uh-recon-shodan-query country:us state:ca city:irvine port:80 login
