@@ -53,6 +53,8 @@ gad@ghost:/opt/uh-recon$ echo 'RWFzdGVyIGVnZ3Mgb24gdGhlIG1lbnU' > shodan-api-key
 
 ```console
 gad@ghost:/opt/uh-recon$ ./uh-shodan-init
+./uh-shodan-init : Initializing Shodan API w/key in shodan-api-key.txt ...
+./uh-shodan-init : ...Successfully initialized
 ```
 
 ## Usage
