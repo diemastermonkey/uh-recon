@@ -47,8 +47,6 @@ gad@ghost:/opt$ git clone https://github.com/diemastermonkey/uh-recon.git
 ```console
 gad@ghost:/opt$ cd uh-recon
 gad@ghost:/opt/uh-recon$ echo 'RWFzdGVyIGVnZ3Mgb24gdGhlIG1lbnU' > shodan-api-key.txt
-RWFzdGVyIGVnZ3Mgb24gdGhlIG1lbnU
-^C
 ```
 
 4. Verify your key is working with `./uh-shodan-init
