@@ -58,18 +58,18 @@ For the query `country:us state:ca city:irvine port:3389`, this directory will b
 ### Output Files
 For the query `country:us state:ca city:irvine port:3389`, the following files will be generated:
 ```
-uh_recon_us_ca_irvine_3389/uh_recon_shodan_us_ca_irvine_3389*.domains.txt*
-uh_recon_us_ca_irvine_3389/uh_recon_shodan_us_ca_irvine_3389*.info.txt*
-uh_recon_us_ca_irvine_3389/uh_recon_shodan_us_ca_irvine_3389*.ip.port.txt*
-uh_recon_us_ca_irvine_3389/uh_recon_shodan_us_ca_irvine_3389*.nrich.txt*
-uh_recon_us_ca_irvine_3389/uh_recon_shodan_us_ca_irvine_3389*.raw.txt*
-uh_recon_us_ca_irvine_3389/uh_recon_shodan_us_ca_irvine_3389*.stats.txt*
+uh_recon_us_ca_irvine_3389/uh_recon_shodan_us_ca_irvine_3389.domains.txt
+uh_recon_us_ca_irvine_3389/uh_recon_shodan_us_ca_irvine_3389.info.txt
+uh_recon_us_ca_irvine_3389/uh_recon_shodan_us_ca_irvine_3389.ip.port.txt
+uh_recon_us_ca_irvine_3389/uh_recon_shodan_us_ca_irvine_3389.nrich.txt
+uh_recon_us_ca_irvine_3389/uh_recon_shodan_us_ca_irvine_3389.raw.txt
+uh_recon_us_ca_irvine_3389/uh_recon_shodan_us_ca_irvine_3389.stats.txt
 ```
 
 Here's what each of the files contain:
-* .info.txt: Metadata about the search, parameters, and tools used
-* .stats.txt: The output of Shodan's "stats" command for this search
-* .nrich.txt: Output of Nrich provided with your search results 
+* ....info.txt: Metadata about the search, parameters, and tools used
+* ...stats.txt: The output of Shodan's "stats" command for this search
+* ...nrich.txt: Output of Nrich provided with your search results 
 * .domains.txt: Listing and count of domains in search results
 * .ip.port.txt: Listing of only IPs and ports, one per line
 * .raw.txt: Complete raw output of your Shodan search
