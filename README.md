@@ -16,10 +16,9 @@ And we're here to share!
 
 Features:
 * Abstracts Shodan CLI for noobish users
-* Creates/refreshes recon data into subdirectories
-* Enriches with nrich and other tools
-* Easy-bakes data so no fuss for other tools
-* Decreases API use, updating only after N days
+* Creates/enriches/refreshes recon data into subdirectories
+* Easy-bakes the data for minimum downstream fuss
+* Decreases API use by updating only after N days
 * Minimal dependencies beyond Shodan CLI
 
 Un-Features:
