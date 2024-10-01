@@ -113,8 +113,23 @@ Here's what each of the files contain:
 * ...ip.port.txt: Listing of only IPs and ports, one per line
 * ...raw.txt: Complete raw output of your Shodan search
 
+It will also create "...dirs.txt" and "...txt.log" files, useful for debugging/etc.
+
 ## Components
 (Coming soon: List of all scripts and what and why)
+
+* gad-frequency-count
+* gad-unescape
+* uh-recon-ip-lookup
+* uh-recon-ip-to-nrich
+* uh-recon-raw-to-domains
+* uh-recon-run
+* uh-recon-run-bg
+* uh-recon-shodan-query
+* uh-shodan-init
+* uh-shodan-to-ip-port
+* uh-shodan-to-ip-services-domain
+* uh-shodan-url-to-query
 
 ## Bugs
 So, so many, see [bugs.txt](https://github.com/diemastermonkey/uh-recon/blob/main/bugs.txt)
