@@ -125,18 +125,18 @@ Most tools should support both input files and pipes. Many more are in the works
 * gad-frequency-count: How many of each thing in a list of things
 * gad-unescape: URLs etc in, plain text out
 * uh-recon-ip-lookup: Add host names to list of IPs
-* uh-recon-ip-to-nrich: Finagle NRich results from list of IPs
-* uh-recon-raw-to-domains: 
-* uh-recon-run
-* uh-recon-run-bg
-* uh-recon-shodan-query
-* uh-shodan-init
-* uh-shodan-to-ip-port
-* uh-shodan-to-ip-services-domain
-* uh-shodan-url-to-query
+* uh-recon-ip-to-nrich: Get Nrich results for list of IPs
+* uh-recon-raw-to-domains: Domains only
+* uh-recon-run: The main "run my recon" script
+* uh-recon-run-bg: Helper for logging, tailing
+* uh-recon-shodan-query: Executes Shodan queries
+* uh-shodan-init: Inits Shodan API access
+* uh-shodan-to-ip-port: IPs, ports only
+* uh-shodan-to-ip-services-domain: IPs, services by domain
+* uh-shodan-url-to-query: Shodan Search URI in, CLI syntax out
 
 ## Bugs
-So, so many, see [bugs.txt](https://github.com/diemastermonkey/uh-recon/blob/main/bugs.txt)
+*So* many: [bugs.txt](https://github.com/diemastermonkey/uh-recon/blob/main/bugs.txt)
 
 ## License and Acknowledgements
 
