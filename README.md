@@ -87,7 +87,7 @@ gad@ghost:/opt/uh-recon$ ./uh-recon-run mylist.txt
 ## Outputs
 
 ### Output Directories
-Directories are named for their search parameters, and all related outputs are stored therein. 
+Directories are named for their search parameters. All associated output is stored inside. 
 
 For the query `country:us state:ca city:irvine port:3389`, this directory will be created (or updated):
 ```console
