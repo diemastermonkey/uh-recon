@@ -120,8 +120,19 @@ This is (will continue to be) a very Unix-philosophy approach: Small, simple too
 
 Most tools should support both input files and pipes. Many more are in the works.
 
-* [gad-frequency-count](https://github.com/diemastermonkey/uh-recon/blob/main/gad-frequency-count): How many of each thing in a list of things 
+* [gad-frequency-count](https://github.com/diemastermonkey/uh-recon/blob/main/gad-frequency-count): How many of each in a list of things 
 * [gad-unescape](https://github.com/diemastermonkey/uh-recon/blob/main/gad-unescape): URLs etc in, plain text out
+* [uh-recon-ip-lookup](https://github.com/diemastermonkey/uh-recon/blob/main/uh-recon-ip-lookup): Add host names to list of IPs
+* [uh-recon-ip-to-nrich](https://github.com/diemastermonkey/uh-recon/blob/main/uh-recon-ip-to-nrich): Get Nrich results for list of IPs
+* [uh-recon-raw-to-domains](https://github.com/diemastermonkey/uh-recon/blob/main/uh-recon-raw-to-domains): Domains only
+* [uh-recon-run](https://github.com/diemastermonkey/uh-recon/blob/main/uh-recon-run): The main "run my recon" script
+* [uh-recon-run-bg](https://github.com/diemastermonkey/uh-recon/blob/main/uh-recon-run-bg): Helper for logging, tailing
+* [uh-recon-shodan-query](https://github.com/diemastermonkey/uh-recon/blob/main/uh-recon-shodan-query): Executes Shodan queries
+* [uh-shodan-init](https://github.com/diemastermonkey/uh-recon/blob/main/uh-shodan-init): Inits Shodan API access
+* [uh-shodan-to-ip-port](https://github.com/diemastermonkey/uh-recon/blob/main/uh-shodan-to-ip-port): IPs, ports only
+* [uh-shodan-to-ip-services-domain](https://github.com/diemastermonkey/uh-recon/blob/main/uh-shodan-to-ip-services-domain): IPs, services by domain
+* [uh-shodan-url-to-query](https://github.com/diemastermonkey/uh-recon/blob/main/uh-shodan-url-to-query): Shodan Search URI in, CLI syntax out
+
 * uh-recon-ip-lookup: Add host names to list of IPs
 * uh-recon-ip-to-nrich: Get Nrich results for list of IPs
 * uh-recon-raw-to-domains: Domains only
