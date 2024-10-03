@@ -58,7 +58,7 @@ gad@ghost:/opt/uh-recon$ ./uh-shodan-init
 
 ## Usage
 
-1. Create a text file with search parameters for each colleciton, one per line
+1. Create a text file with search parameters for each collection, one per line
 2. Run (or `cron`) the `./uh-recon-run` script, passing your hitlist
 3. Profit
 
