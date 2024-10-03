@@ -120,8 +120,8 @@ This is (will continue to be) a very Unix-philosophy approach: Small, simple too
 
 Most tools should support both input files and pipes. Many more are in the works.
 
-* gad-frequency-count: How many of each thing in a list of things
-* gad-unescape: URLs etc in, plain text out
+* [gad-frequency-count](https://github.com/diemastermonkey/uh-recon/blob/main/gad-frequency-count): How many of each thing in a list of things 
+* [gad-unescape](https://github.com/diemastermonkey/uh-recon/blob/main/gad-unescape): URLs etc in, plain text out
 * uh-recon-ip-lookup: Add host names to list of IPs
 * uh-recon-ip-to-nrich: Get Nrich results for list of IPs
 * uh-recon-raw-to-domains: Domains only
