@@ -116,7 +116,7 @@ Here's what each of the files contain:
 It will also create "...dirs.txt" and "...txt.log" files, useful for debugging/etc.
 
 ## Components
-This is (will continue to be) a very Unix-philosophy approach: Small, simple tools that mostly do one thing, connected to each other as needed. Some tools are so simple they might not truly warrant a script, but this model minimizes overhead for quick expansion later. 
+These follow a very Unix-philosophy approach: Small, simple tools that mostly do one thing, stitched as needed. Some are so simple they might not truly warrant a script, but this model minimizes overhead for quick expansion later. 
 
 Most support both input files and pipes. More are in the works.
 
