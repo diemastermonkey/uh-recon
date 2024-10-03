@@ -118,15 +118,15 @@ It will also create "...dirs.txt" and "...txt.log" files, useful for debugging/e
 ## Components
 (Coming soon: List of all scripts and what and why)
 
-This is (and will continue to be) a very Unix-philosophy approach: Small, simple tools that mostly do one thing each and can be connected to each other as needed. Some tools may be so simple they might not truly warrant a separate script, but keeping things this way also minimizes overhead for quick expansion later. Most tools are intended to support both input files and pipes. 
+This is (will continue to be) a very Unix-philosophy approach: Small, simple tools that mostly do one thing, connected to each other as needed. Some tools are so simple they might not truly warrant a script, but this model minimizes overhead for quick expansion later. 
 
-Many more tools are in the works.
+Most tools should support both input files and pipes. Many more are in the works.
 
-* gad-frequency-count
-* gad-unescape
-* uh-recon-ip-lookup
-* uh-recon-ip-to-nrich
-* uh-recon-raw-to-domains
+* gad-frequency-count: How many of each thing in a list of things
+* gad-unescape: URLs etc in, plain text out
+* uh-recon-ip-lookup: Add host names to list of IPs
+* uh-recon-ip-to-nrich: Finagle NRich results from list of IPs
+* uh-recon-raw-to-domains: 
 * uh-recon-run
 * uh-recon-run-bg
 * uh-recon-shodan-query
