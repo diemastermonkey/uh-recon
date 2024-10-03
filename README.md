@@ -118,6 +118,10 @@ It will also create "...dirs.txt" and "...txt.log" files, useful for debugging/e
 ## Components
 (Coming soon: List of all scripts and what and why)
 
+This is (and will continue to be) a very Unix-philosophy approach: Small, simple tools that mostly do one thing each and can be connected to each other as needed. Some tools may be so simple they might not truly warrant a separate script, but keeping things this way also minimizes overhead for quick expansion later. Most tools are intended to support both input files and pipes. 
+
+Many many more tools are being added.
+
 * gad-frequency-count
 * gad-unescape
 * uh-recon-ip-lookup
