@@ -1,0 +1,14 @@
+Top 1 Results for Facet: country
+US                                    29
+
+Top 10 Results for Facet: org
+AT&T Services, Inc.                    7
+Charter Communications                 6
+FT DATA, LLC                           4
+AT&T Corp.                             2
+Private Customer - AT&T Internet Services           2
+Alabama Supercomputer Authority           1
+Comcast Cable Communications, LLC           1
+Level 3 Parent, LLC                    1
+Mediacom Communications Corp           1
+Scottsboro Electric Power Board           1

@@ -1,0 +1,34 @@
+./uh-shodan-init : Initializing Shodan API w/key in shodan-api-key.txt ...
+./uh-shodan-init : ...Successfully initialized
+./uh-recon-shodan-query country:us state:ca city:angeles port:8000 login
+./uh-recon-shodan-query : Creating uh_recon_us_ca_angeles_8000_login
+./uh-recon-shodan-query : Fetching Shodan results
+./uh-recon-shodan-query : 
+  Line Word Bytes File
+  18  559 9270 uh_recon_us_ca_angeles_8000_login/uh_recon_shodan_us_ca_angeles_8000_login.raw.txt
+./uh-recon-shodan-query : Contents in uh_recon_us_ca_angeles_8000_login
+./uh-recon-shodan-query : Exiting.
+./uh-recon-shodan-query country:us state:al port:3389 administrator
+./uh-recon-shodan-query : Creating uh_recon_us_al_3389_administrator
+./uh-recon-shodan-query : Fetching Shodan results
+./uh-recon-shodan-query : 
+  Line Word Bytes File
+   28  1098 12766 uh_recon_us_al_3389_administrator/uh_recon_shodan_us_al_3389_administrator.raw.txt
+./uh-recon-shodan-query : Contents in uh_recon_us_al_3389_administrator
+./uh-recon-shodan-query : Exiting.
+./uh-recon-shodan-query ip:154.7.154.172
+./uh-recon-shodan-query : Creating uh_recon_ip154.7.154.172
+./uh-recon-shodan-query : Fetching Shodan results
+./uh-recon-shodan-query : 
+  Line Word Bytes File
+   2  289 3680 uh_recon_ip154.7.154.172/uh_recon_shodan_ip1547154172.raw.txt
+./uh-recon-shodan-query : Contents in uh_recon_ip154.7.154.172
+./uh-recon-shodan-query : Exiting.
+./uh-recon-shodan-query org:wiser
+./uh-recon-shodan-query : Creating uh_recon_wiser
+./uh-recon-shodan-query : Fetching Shodan results
+./uh-recon-shodan-query : 
+  Line Word Bytes File
+   101  15427 192721 uh_recon_wiser/uh_recon_shodan_wiser.raw.txt
+./uh-recon-shodan-query : Contents in uh_recon_wiser
+./uh-recon-shodan-query : Exiting.

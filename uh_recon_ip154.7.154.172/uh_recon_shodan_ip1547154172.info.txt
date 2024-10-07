@@ -1,0 +1,12 @@
+CONTENT = Uh-Tools Recon Info
+GENERATOR = ./uh-recon-shodan-query
+EXECUTED = 20241007
+SEARCH = ip:154.7.154.172
+SHODANURL = 
+TOKENS = ip154.7.154.172
+DIR = uh_recon_ip154.7.154.172
+BASEFILE = uh_recon_shodan_ip1547154172
+WORDCOUNT
+
+  Line Word Bytes File
+   2  289 3680 uh_recon_ip154.7.154.172/uh_recon_shodan_ip1547154172.raw.txt

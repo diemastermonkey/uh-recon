@@ -1,0 +1,18 @@
+Top 6 Results for Facet: country
+US                                 3,058
+BR                                    12
+CA                                    10
+CH                                     3
+GB                                     2
+HK                                     1
+
+Top 9 Results for Facet: org
+Wiser Solutions Inc.               3,056
+Wiser Educação SA                     11
+The Wiser Financial Group              7
+Wiser Solutions, Inc.                  4
+Wiser telecom                          3
+Be Wiser Insurance                     2
+WISER CLUB LTD - CAUSEWAY BAY PLAZA 2 (LIPPO HOUSE)           1
+WISER POST                             1
+WISER TELECOMUNICACOES LTDA            1

@@ -1,0 +1,12 @@
+CONTENT = Uh-Tools Recon Info
+GENERATOR = ./uh-recon-shodan-query
+EXECUTED = 20241007
+SEARCH = org:wiser
+SHODANURL = 
+TOKENS = wiser
+DIR = uh_recon_wiser
+BASEFILE = uh_recon_shodan_wiser
+WORDCOUNT
+
+  Line Word Bytes File
+   101  15427 192721 uh_recon_wiser/uh_recon_shodan_wiser.raw.txt

@@ -1,0 +1,12 @@
+CONTENT = Uh-Tools Recon Info
+GENERATOR = ./uh-recon-shodan-query
+EXECUTED = 20241007
+SEARCH = country:us state:al port:3389 administrator
+SHODANURL = 
+TOKENS = us_al_3389_administrator
+DIR = uh_recon_us_al_3389_administrator
+BASEFILE = uh_recon_shodan_us_al_3389_administrator
+WORDCOUNT
+
+  Line Word Bytes File
+   28  1098 12766 uh_recon_us_al_3389_administrator/uh_recon_shodan_us_al_3389_administrator.raw.txt

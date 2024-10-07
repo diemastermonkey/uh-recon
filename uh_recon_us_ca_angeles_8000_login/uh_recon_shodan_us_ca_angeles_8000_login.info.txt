@@ -1,0 +1,12 @@
+CONTENT = Uh-Tools Recon Info
+GENERATOR = ./uh-recon-shodan-query
+EXECUTED = 20241007
+SEARCH = country:us state:ca city:angeles port:8000 login
+SHODANURL = 
+TOKENS = us_ca_angeles_8000_login
+DIR = uh_recon_us_ca_angeles_8000_login
+BASEFILE = uh_recon_shodan_us_ca_angeles_8000_login
+WORDCOUNT
+
+  Line Word Bytes File
+  18  559 9270 uh_recon_us_ca_angeles_8000_login/uh_recon_shodan_us_ca_angeles_8000_login.raw.txt
