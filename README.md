@@ -28,7 +28,7 @@ Un-Features:
 
 Requirements:
 * Shodan CLI for your platform
-* Shodan API Key ([here])(https://account.shodan.io/)
+* Shodan API Key from [account.shodan.io](https://account.shodan.io/)
 * bash, grep, sed, awk, Python, Perl
 * [Nrich](https://gitlab.com/shodan-public/nrich)
 
