@@ -1,2 +1,0 @@
-uh_recon_us_ca_3389_administrator
-uh_recon_us_root_23_login_password_name_Session
