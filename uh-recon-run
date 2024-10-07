@@ -1,10 +1,10 @@
 #!/usr/bin/bash
-# Run hitlist in bg to a log so you can tail it
+# Run hitlist to a log so you can tail it
 # Requires "$0-bg" script
 # 2024/gad
 
-# If no args
-if [[ -z "$1" || ! -f "$1" ]]; then
+# If no args or file
+if [ -z "$@" ] || [ ! -r "$1" ]; then
   head -5 $0 | tail -4
   echo -e "$0 <file_with_recon_parameters>\n"
   exit
@@ -22,7 +22,8 @@ if [ $? -ne 0 ]; then
 fi
 
 # Monitor log file till PID terminates
-# Serving suggestion -----------------v
+touch "$1.log"                    # Sidestep error
+# Serving suggestion ---------------v
 tail --follow $1.log --pid=$BGPID # | ccze --raw-ansi 
 
 # Store created dirs in a handy file

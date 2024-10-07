@@ -1,19 +1,14 @@
 #!/usr/bin/bash
 # Turn a single IP or list containing IPs
 # into input for 'nrich', and produce output.
-# Should also accept input via pipe.
 # Ignores non-IPs in input
+# To do: Should also accept input via pipe.
 # 2024/gad
 
 # Config
 NRICH="/usr/bin/nrich"                # Nrich cli name
-IN="$*"                               # May turn out to be pipe
+IN="$@"                               # May turn out to be pipe
 DATESTAMP=$(date "+%Y%m%d")
-
-# If via pipe
-if [ ! -t 0 ]; then
-  read -r IN  
-fi
 
 # If no args
 if [ -z "$IN" ];

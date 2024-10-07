@@ -2,7 +2,7 @@
 
 The "Uh-Recon" tools for pre-engagement reconnaissance. 
 
-*Probably* not ready for you, yet: [bugs.txt](https://github.com/diemastermonkey/uh-recon/blob/main/bugs.txt)
+PROBABLY NOT READY FOR YOU YET.
 
 ## Synopsis
 Tools used by the Unhackers team in pre-engagement reconnaisance and related tasks. 
@@ -16,9 +16,10 @@ And we're here to share!
 
 Features:
 * Abstracts Shodan CLI for noobish users
-* Creates/enriches/refreshes recon data into subdirectories
-* Easy-bakes the data for minimum downstream fuss
-* Decreases API use by updating only after N days
+* Creates/refreshes recon data into subdirectories
+* Enriches with nrich and other tools
+* Easy-bakes data so no fuss for other tools
+* Decreases API use, updating only after N days
 * Minimal dependencies beyond Shodan CLI
 
 Un-Features:
@@ -58,7 +59,7 @@ gad@ghost:/opt/uh-recon$ ./uh-shodan-init
 
 ## Usage
 
-1. Create a text file with search parameters for each collection, one per line
+1. Create a text file with search parameters for each colleciton, one per line
 2. Run (or `cron`) the `./uh-recon-run` script, passing your hitlist
 3. Profit
 
@@ -87,7 +88,7 @@ gad@ghost:/opt/uh-recon$ ./uh-recon-run mylist.txt
 ## Outputs
 
 ### Output Directories
-Directories are named for their search parameters. All associated output is stored inside. 
+Directories are named for their search parameters, and all related outputs are stored therein. 
 
 For the query `country:us state:ca city:irvine port:3389`, this directory will be created (or updated):
 ```console
@@ -113,29 +114,11 @@ Here's what each of the files contain:
 * ...ip.port.txt: Listing of only IPs and ports, one per line
 * ...raw.txt: Complete raw output of your Shodan search
 
-It will also create "...dirs.txt" and "...txt.log" files, useful for debugging/etc.
-
 ## Components
-These follow a very Unix-philosophy approach: Small, simple tools that mostly do one thing, stitched as needed. Some are so simple they might not truly warrant a script, but this model minimizes overhead for quick expansion later. 
-
-Most support both input files and pipes. More are in the works.
-
-* [gad-frequency-count](https://github.com/diemastermonkey/uh-recon/blob/main/gad-frequency-count): How many of each in a list of things
-* [gad-unescape](https://github.com/diemastermonkey/uh-recon/blob/main/gad-unescape): URLs etc in, plain text out
-* [uh-recon-ip-lookup](https://github.com/diemastermonkey/uh-recon/blob/main/uh-recon-ip-lookup): Add host names to list of IPs
-* [uh-recon-ip-to-nrich](https://github.com/diemastermonkey/uh-recon/blob/main/uh-recon-ip-to-nrich): Get Nrich results for list of IPs
-* [uh-recon-raw-to-domains](https://github.com/diemastermonkey/uh-recon/blob/main/uh-recon-raw-to-domains): Domains only
-* [uh-recon-run](https://github.com/diemastermonkey/uh-recon/blob/main/uh-recon-run): The main "run my recon" script
-* [uh-recon-run-bg](https://github.com/diemastermonkey/uh-recon/blob/main/uh-recon-run-bg): Helper for logging, tailing
-* [uh-recon-shodan-query](https://github.com/diemastermonkey/uh-recon/blob/main/uh-recon-shodan-query): Executes Shodan queries
-* [uh-shodan-init](https://github.com/diemastermonkey/uh-recon/blob/main/uh-shodan-init): Inits Shodan API access
-* [uh-shodan-to-ip-port](https://github.com/diemastermonkey/uh-recon/blob/main/uh-shodan-to-ip-port): IPs, ports only
-* [uh-shodan-to-ip-services-domain](https://github.com/diemastermonkey/uh-recon/blob/main/uh-shodan-to-ip-services-domain): IPs, services by domain
-* [uh-shodan-url-to-query](https://github.com/diemastermonkey/uh-recon/blob/main/uh-shodan-url-to-query): Shodan Search URI in, CLI syntax out
-  
+(Coming soon: List of all scripts and what and why)
 
 ## Bugs
-*So* many: [bugs.txt](https://github.com/diemastermonkey/uh-recon/blob/main/bugs.txt)
+So, so many, see [bugs.txt](https://github.com/diemastermonkey/uh-recon/blob/main/bugs.txt)
 
 ## License and Acknowledgements
 

@@ -1,6 +1,4 @@
-country:us state:ca city:irvine port:80 login
-country:us state:ca port:3389 administrator
-country:us state:ca port:23 cisco
-country:us state:ca "Authentication: disabled" port:445
-ip:104.18.32.47
-ip:104.18.32.46
+country:us state:ca city:angeles port:8000 login
+country:us state:al port:3389 administrator
+ip:154.7.154.172
+org:wiser

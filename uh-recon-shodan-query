@@ -22,16 +22,18 @@ UHS2IP="./uh-shodan-to-ip-port"       # Filters raw shodan
 UHIPNR="./uh-recon-ip-to-nrich"       # Runs IP lists thru Nrich
 UHDOMS="./uh-recon-raw-to-domains"    # Summarizes domain counts
 TEMPLATE="uh_recon_TOKENS"            # Template for directories
-IN="$*"                               # May turn out to be pipe
+IN="$@"                               # May turn out to be pipe
 # Removed from $TOKENS for dirnames etc
 REMOVESTRINGS="country\|state\|city\|port\|org\|html\|\@"
 # Metadata prepared at runtime
 DATESTAMP=$(date "+%Y%m%d")
 INFO="CONTENT = Uh-Tools Recon Info\nGENERATOR = $0\nEXECUTED = $DATESTAMP"
 
-# If via pipe
+# If via pipe, read till end
 if [ ! -t 0 ]; then
-  read -r IN  
+  while IFS= read -r line; do    
+    read -r IN  
+  done
 fi
 
 # If no args
