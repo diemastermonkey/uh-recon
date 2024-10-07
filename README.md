@@ -41,7 +41,7 @@ gad@ghost:~$ cd /opt
 gad@ghost:/opt$ git clone https://github.com/diemastermonkey/uh-recon.git
 ```
 
-2. Enter your Shodan API key in `shodan-api-key.txt`
+2. Enter your [Shodan API key](https://account.shodan.io/) in `shodan-api-key.txt`
 
 ```console
 gad@ghost:/opt$ cd uh-recon
