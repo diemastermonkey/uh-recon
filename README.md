@@ -48,7 +48,7 @@ gad@ghost:/opt$ cd uh-recon
 gad@ghost:/opt/uh-recon$ echo 'RWFzdGVyIGVnZ3Mgb24gdGhlIG1lbnU' > shodan-api-key.txt
 ```
 
-4. Verify your key is working with `./uh-shodan-init
+3. Verify your key is working with `./uh-shodan-init
 
 ```console
 gad@ghost:/opt/uh-recon$ ./uh-shodan-init
