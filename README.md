@@ -2,7 +2,7 @@
 
 The "Uh-Recon" tools for pre-engagement reconnaissance. 
 
-*Might* be ready for you? See [bugs.txt](https://github.com/diemastermonkey/uh-recon/blob/main/bugs.txt))
+*Might* be ready for you? See [bugs.txt](https://github.com/diemastermonkey/uh-recon/blob/main/bugs.txt)
 
 ## Synopsis
 Tools used by the Unhackers team in pre-engagement reconnaisance and related tasks. 
