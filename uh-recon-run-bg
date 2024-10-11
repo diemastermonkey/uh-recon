@@ -13,11 +13,6 @@ fi
 # Init Shodan
 ./uh-shodan-init
 
-# NO
-# for line in $(cat "$1"); do 
-#  echo "$0 : ./uh-recon-shodan-query \"$line"""
-# done
-
 cat "$1" | while IFS= read -r x; do
   echo "./uh-recon-shodan-query $x"
   echo ./uh-recon-shodan-query $x | sh
