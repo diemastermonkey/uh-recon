@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+# Turn raw output from Shodan search into
+# sorted list of TLDs, by frequency
 # 2024/gad
 
 import sys
