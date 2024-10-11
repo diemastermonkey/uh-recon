@@ -102,17 +102,17 @@ echo "$STATS" > "$DIR/$BASEFILE.stats.txt"
 echo -e "$INFO" > "$DIR/$BASEFILE.info.txt"
 WC=$(echo -e '\n  Line Word Bytes File' && wc "$DIR/$BASEFILE.raw.txt")
 echo -e "WORDCOUNT\n$WC" >> "$DIR/$BASEFILE.info.txt"
-echo -e "$0 : $WC"
 
 # Additional processing with other uh-tools
 # IP/port listing
 $UHS2IP "$DIR/$BASEFILE.raw.txt" > "$DIR/$BASEFILE.ip.port.txt"
 # Domain listing
-cat "$DIR/$BASEFILE.raw.txt" | $UHDOMS > "$DIR/$BASEFILE.domains.txt"
+$UHDOMS "$DIR/$BASEFILE.raw.txt" > "$DIR/$BASEFILE.domains.txt"
 # Run IPs through nrich
 $UHIPNR "$DIR/$BASEFILE.ip.port.txt" > "$DIR/$BASEFILE.nrich.txt"
 
 # Update user, exit
 echo -e "$0 : Contents in $DIR"
+echo -e "$0 : $WC"
 echo -e "$0 : Exiting."
 

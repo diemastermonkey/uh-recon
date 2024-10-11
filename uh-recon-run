@@ -1,10 +1,10 @@
 #!/usr/bin/bash
-# Run hitlist to a log so you can tail it
+# Runs hitlist to a log so you can tail it
 # Requires "$0-bg" script
 # 2024/gad
 
 # If no args or file
-if [ -z "$@" ] || [ ! -r "$1" ]; then
+if [ -z "$1" ] || [ ! -r "$1" ]; then
   head -5 $0 | tail -4
   echo -e "$0 <file_with_recon_parameters>\n"
   exit

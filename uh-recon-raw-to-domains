@@ -1,21 +1,31 @@
-#!/usr/bin/perl
-# Count up domains in a Shodan CLI raw output
-# Perl because python associative arrays are pita
-# A bit broken. 2024/gad
-my (%IPS);
-my (%DOMS);
+#!/usr/bin/python3
+# 2024/gad
 
-while ($line = <STDIN>) { 
-  next if ($line =~ /^\s*$/);            # Skip blanks
-  ($ip, $port, $dns, $service) = split (/\s+/, $line);
-  my $dom = $1 if ($dns =~ /\.(\w+\.\w{2,3})\b/);
-  $IPS{$ip} = $IPS{$ip} + 1;
-  $DOMS{$dom} = $DOMS{$dom} + 1;
-}
+import sys
+from collections import Counter
 
-foreach $dom (%DOMS) { 
-  # Really crappy lazy cleanup
-  next if ($dom =~ /^\d+$/);   # Skip numeric doms?
-  next unless ($dom =~ /\w+/); # Occasional blanks
-  print ("\n$dom " . $DOMS{$dom});
-}
+# Check for input file argument
+if len(sys.argv) != 2:
+  print ("Wrong! python3 %s <shodan_raw_output>" % (sys.argv[0]))
+  sys.exit(1)
+
+sInfile = sys.argv[1]
+
+# Grep-out domain-ish strings from 3rd column
+aDomains = []
+with open (sInfile) as f:
+  for line in f:
+    parts = line.split()
+    if len(parts) > 2:  # Ensure 3rd col else Python freaks
+      domain_parts = parts[2].split('.')
+      if len(domain_parts) >= 2 and len(domain_parts[-1]) > 1:
+        domain = '.'.join(domain_parts[-2:])   # Extract top-level domain
+
+        # if domain.isalnum() or '-' in domain:  # Basic domain validation
+        aDomains.append(domain)
+
+# Count occurrences and sort by frequency
+domain_counts = Counter(aDomains)
+for domain, count in domain_counts.most_common():
+  print (f"{count} {domain}")
+

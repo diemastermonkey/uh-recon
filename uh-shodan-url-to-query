@@ -1,4 +1,4 @@
-#!/usr/bin/sh 
+#!/usr/bin/bash 
 # Simply converts a Shodan search URL to 
 # parameters for uh-recon-shodan-query.
 #   echo "https://blah?stuff%3Aenc" | ThisScript
